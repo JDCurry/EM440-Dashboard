@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 4. **Run the dashboard:**
 ```bash
-streamlit run streamlit_dashboard_starter.py
+streamlit run streamlit_dashboard.py
 ```
 
 5. **View in browser:**
@@ -49,7 +49,7 @@ The dashboard will automatically open at `http://localhost:8501`
 ## Project Structure
 ```
 wa_climate_fire_dashboard/
-├── streamlit_dashboard_starter.py   # Main application
+├── streamlit_dashboard.py   # Main application
 ├── requirements.txt                  # Python dependencies
 ├── data/
 │   ├── WA_Climate_Fire_Dashboard_Data.csv
@@ -92,7 +92,7 @@ Where:
 
 ### For County Emergency Managers
 1. Select your county on the map
-2. Review detailed popup with local metrics
+2. Review detailed pop-up with local metrics
 3. Compare your county to state averages
 
 ### For Regional Coordinators
@@ -103,7 +103,7 @@ Where:
 ## Customization
 
 ### Modify Risk Score Weights
-Edit lines 115-120 in `streamlit_dashboard_starter.py`:
+Edit lines 115-120 in `streamlit_dashboard.py`:
 ```python
 dashboard_data['climate_fire_risk_score'] = (
     dashboard_data['heat_stress'] * 25 +     # Adjust weight
@@ -114,7 +114,7 @@ dashboard_data['climate_fire_risk_score'] = (
 ```
 
 ### Change Map Style
-Edit line 184 in `streamlit_dashboard_starter.py`:
+Edit line 184 in `streamlit_dashboard.py`:
 ```python
 tiles='OpenStreetMap'  # Options: 'CartoDB positron', 'Stamen Terrain'
 ```
@@ -122,19 +122,6 @@ tiles='OpenStreetMap'  # Options: 'CartoDB positron', 'Stamen Terrain'
 ### Add New Filters
 Add to sidebar section (lines 90-110) following the existing pattern.
 
-## Deployment
-
-### Streamlit Community Cloud (Recommended for class)
-1. Push code to GitHub repository
-2. Visit [share.streamlit.io](https://share.streamlit.io)
-3. Connect GitHub repo
-4. Deploy with one click
-
-### Docker
-```bash
-docker build -t wa-fire-dashboard .
-docker run -p 8501:8501 wa-fire-dashboard
-```
 
 ## Troubleshooting
 
@@ -158,15 +145,15 @@ docker run -p 8501:8501 wa-fire-dashboard
 - [ ] Export to PDF report functionality
 
 ## License
-Educational use - GIS Emergency Management Course Assignment
+Educational use - Pierce College EM440: GIS Emergency Management Course Assignment
 
 ## Author
-[Your Name]  
-[Course]  
+[Josh Curry]  
+[EM440: Geographic Information Systems (GIS) for EM]  
 November 2025
 
 ## Acknowledgments
 - NOAA National Centers for Environmental Information
 - USDA Forest Service
 - Washington State Emergency Management Division
-- Course Instructor: [Professor Name]
+- Course Instructor: [Professor Lenora Borchardt]
