@@ -150,7 +150,7 @@ with col2:
     st.metric(
         "FEMA Fire Disasters",
         fema_count,
-        help="Federal disaster declarations 1970-2024"
+        help="Federal disaster declarations 1991-2024"
     )
 
 with col3:
@@ -174,7 +174,7 @@ st.markdown("---")
 if fema_data is not None:
     st.info(f"""
     📊 **Multi-Source Fire Data**: This dashboard combines {len(fema_data)} FEMA disaster declarations 
-    (1970-2024) with 482 NOAA wildfire events (1996-2024) and climate trend analysis to provide 
+    (1991-2024) with 482 NOAA wildfire events (1996-2024) and climate trend analysis to provide 
     comprehensive fire risk intelligence for mitigation planning.
     """)
 
@@ -413,7 +413,7 @@ st.sidebar.markdown("""
     ### 🎯 About This Dashboard
     
     Multi-layer fire risk analysis combining:
-    - **211 FEMA disasters** (1970-2024)
+    - **186 FEMA disasters** (1991-2024)
     - **482 NOAA wildfire events** (1996-2024)
     - **Climate trends** (2019-2024)
     - **WUI exposure** data
