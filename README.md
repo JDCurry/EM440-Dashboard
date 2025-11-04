@@ -148,12 +148,12 @@ Add to sidebar section (lines 90-110) following the existing pattern.
 Educational use - Pierce College EM440: GIS Emergency Management Course Assignment
 
 ## Author
-[Josh Curry]  
-[EM440: Geographic Information Systems (GIS) for EM]  
+Josh Curry
+EM440: Geographic Information Systems (GIS) for EM 
 November 2025
 
 ## Acknowledgments
 - NOAA National Centers for Environmental Information
 - USDA Forest Service
 - Washington State Emergency Management Division
-- Course Instructor: [Professor Lenora Borchardt]
+- Course Instructor: Professor Lenora Borchardt
