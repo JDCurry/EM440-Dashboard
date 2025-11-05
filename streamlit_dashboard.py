@@ -401,7 +401,7 @@ st.markdown("""
     **Data Sources:** 
     • Climate: NOAA Climate Normals (2019-2024)  
     • Fire Disasters: FEMA Declarations (1991-2024) & NOAA Storm Events (1996-2024)  
-    • WUI: USDA Forest Service  
+    • Wildland-Urban Interface: USDA Forest Service  
     • Demographics: U.S. Census Bureau  
     
     **Last Updated:** November 2025 | Washington State Emergency Management
@@ -416,7 +416,7 @@ st.sidebar.markdown("""
     - **186 FEMA disasters** (1991-2024)
     - **482 NOAA wildfire events** (1996-2024)
     - **Climate trends** (2019-2024)
-    - **WUI exposure** data
+    - **Wildland-Urban Interface (WUI) exposure** data
     
     **Mission Areas:**
     - Mitigation (primary)
