@@ -57,7 +57,8 @@ st.markdown("""
 
 # Title
 st.title("🔥 Washington Climate-Fire Risk Intelligence Dashboard")
-st.subheader("EM440: Geographic Information Systems (GIS) for EM - Module 7 - Josh Curry")
+st.subheader("EM440: Geographic Information Systems (GIS) for EM - Module 7")
+st.subheader("Josh Curry")
 st.markdown("**2019-2024 Climate Trends & Historical Fire Analysis**")
 st.markdown("---")
 
