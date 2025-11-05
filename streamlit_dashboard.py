@@ -398,13 +398,13 @@ st.download_button(
 # Footer
 st.markdown("---")
 st.markdown("""
-    **Data Sources:** 
+    **Data Sources:** <br>
     • Climate: NOAA Climate Normals (2019-2024)  
     • Fire Disasters: FEMA Declarations (1991-2024) & NOAA Storm Events (1996-2024)  
     • Wildland-Urban Interface: USDA Forest Service  
     • Demographics: U.S. Census Bureau  
     
-    **Last Updated:** November 2025 | Washington State Emergency Management
+    **Last Updated:** November 5, 2025 | Pierce College Fort Steilacoom
 """)
 
 # Sidebar info
