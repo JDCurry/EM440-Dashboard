@@ -400,7 +400,7 @@ st.markdown("---")
 st.markdown("""
     **Data Sources:** 
     • Climate: NOAA Climate Normals (2019-2024)  
-    • Fire Disasters: FEMA Declarations (1970-2024) & NOAA Storm Events (1996-2024)  
+    • Fire Disasters: FEMA Declarations (1991-2024) & NOAA Storm Events (1996-2024)  
     • WUI: USDA Forest Service  
     • Demographics: U.S. Census Bureau  
     
