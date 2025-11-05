@@ -343,15 +343,27 @@ with chart_col:
     st.subheader("🌡️ Climate Trends")
     
     # Climate trend bar chart
-    trend_counts = filtered_df['climate_trend'].value_counts()
+    trend_counts = filtered_df['climate_trend'].value_counts().reset_index()
+    trend_counts.columns = ['Climate Trend', 'Count']
     fig_bar = px.bar(
-        x=trend_counts.index,
-        y=trend_counts.values,
-        labels={'x': 'Trend Type', 'y': 'County Count'},
-        color=trend_counts.values,
-        color_continuous_scale='Reds'
+        trend_counts,
+        x='Climate Trend',
+        y='Count',
+        color='Climate Trend',
+        color_discrete_map={
+            'Warming & Drying': '#d73027',
+            'Warming': '#fc8d59',
+            'Stable': '#91cf60',
+            'Cooling': '#4575b4'
+        },
+        labels={'Count': 'County Count'}
     )
-    fig_bar.update_layout(showlegend=False, xaxis_tickangle=-45)
+    fig_bar.update_layout(
+        showlegend=False,
+        xaxis_tickangle=-45,
+        title_text="Climate Trend Distribution",
+        title_x=0.0
+    )
     st.plotly_chart(fig_bar, use_container_width=True)
 
 st.markdown("---")
