@@ -56,9 +56,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Title
-st.title("🔥 Washington Climate-Fire Risk Intelligence Dashboard")
+st.title("Washington Climate-Fire Risk Intelligence Dashboard")
 st.subheader("EM440: Geographic Information Systems (GIS) for EM - Module 7")
-st.subheader("Josh Curry")
 st.markdown("**2019-2024 Climate Trends & Historical Fire Analysis**")
 st.markdown("---")
 
@@ -405,7 +404,7 @@ st.markdown("""
     • Wildland-Urban Interface: USDA Forest Service  
     • Demographics: U.S. Census Bureau  
     
-    **Last Updated:** November 5, 2025 | Pierce College Fort Steilacoom
+    **Last Updated:** November 5, 2025 | Josh Curry | Pierce College Fort Steilacoom
 """, unsafe_allow_html=True)
 
 # Sidebar info
