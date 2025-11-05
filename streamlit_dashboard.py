@@ -57,6 +57,7 @@ st.markdown("""
 
 # Title
 st.title("Washington Climate-Fire Risk Intelligence Dashboard")
+st.subheader("Pierce College")
 st.subheader("EM440: Geographic Information Systems (GIS) for EM")
 st.markdown("**2019-2024 Climate Trends & Historical Fire Analysis**")
 st.markdown("---")
