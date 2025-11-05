@@ -405,7 +405,7 @@ st.markdown("""
     • Demographics: U.S. Census Bureau  
     
     **Last Updated:** November 5, 2025 | Pierce College Fort Steilacoom
-""")
+""", unsafe_allow_html=True)
 
 # Sidebar info
 st.sidebar.markdown("---")
