@@ -95,7 +95,7 @@ except FileNotFoundError:
     st.stop()
 
 # Sidebar filters
-st.sidebar.header("🔍 Filter Controls")
+st.sidebar.header("Filter Controls")
 
 # Risk category filter
 risk_categories = ['All'] + sorted(df['risk_category'].unique().tolist())
@@ -183,7 +183,7 @@ if fema_data is not None:
 map_col, chart_col = st.columns([2.5, 1])
 
 with map_col:
-    st.subheader("📍 Interactive Multi-Layer Risk Map")
+    st.subheader("Interactive Multi-Layer Risk Map")
     
     # Dynamic caption
     if selected_trend == 'Stable' and selected_risk == 'All':
@@ -323,7 +323,7 @@ with map_col:
     folium_static(m, width=900, height=600)
 
 with chart_col:
-    st.subheader("📊 Risk Distribution")
+    st.subheader("Risk Distribution")
     
     # Risk pie chart
     risk_counts = filtered_df['risk_category'].value_counts()
@@ -341,7 +341,7 @@ with chart_col:
     fig_pie.update_traces(textposition='inside', textinfo='percent+label')
     st.plotly_chart(fig_pie, use_container_width=True)
     
-    st.subheader("🌡️ Climate Trends")
+    st.subheader("Climate Trends")
     
     # Climate trend bar chart
     trend_counts = filtered_df['climate_trend'].value_counts().reset_index()
@@ -370,7 +370,7 @@ with chart_col:
 st.markdown("---")
 
 # County rankings table
-st.subheader("🎯 County Risk Rankings with Fire History")
+st.subheader("County Risk Rankings with Fire History")
 
 display_cols = ['County', 'climate_fire_risk_score', 'risk_category', 'climate_trend', 
                 'population_at_risk', 'wui_exposure_pct']
@@ -402,7 +402,7 @@ st.dataframe(display_df, use_container_width=True, hide_index=True, height=400)
 # Download button
 csv = filtered_df.to_csv(index=False)
 st.download_button(
-    label="📥 Download Filtered Data (CSV)",
+    label="Download Filtered Data (CSV)",
     data=csv,
     file_name="wa_climate_fire_risk_filtered.csv",
     mime="text/csv"
@@ -423,7 +423,7 @@ st.markdown("""
 # Sidebar info
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
-    ### 🎯 About This Dashboard
+    ### About This Dashboard
     
     Multi-layer fire risk analysis combining:
     - **186 FEMA disasters** (1991-2024)
