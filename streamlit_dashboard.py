@@ -429,7 +429,7 @@ st.sidebar.markdown("""
     - **186 FEMA disasters** (1991-2024)
     - **482 NOAA wildfire events** (1996-2024)
     - **Climate trends** (2019-2024)
-    - **Wildland-Urban Interface (WUI) exposure** data
+    - **Wildland-Urban Interface (WUI) exposure data** (2020)
     
     **Mission Areas:**
     - Mitigation (primary)
