@@ -412,10 +412,10 @@ st.download_button(
 st.markdown("---")
 st.markdown("""
     **Data Sources:** <br>
-    • Climate: NOAA Climate Normals (2019-2024)  
-    • Fire Disasters: FEMA Declarations (1991-2024) & NOAA Storm Events (1996-2024)  
-    • Wildland-Urban Interface: USDA Forest Service (2020)
-    • Demographics: U.S. Census Bureau (2020) 
+    • Climate: NOAA Climate Normals (2019-2024) <br>
+    • Fire Disasters: FEMA Declarations (1991-2024) & NOAA Storm Events (1996-2024) <br>
+    • Wildland-Urban Interface: USDA Forest Service (2020) <br>
+    • Demographics: U.S. Census Bureau (2020) <br>
     
     **Last Updated:** November 8, 2025 | Josh Curry | Pierce College Fort Steilacoom
 """, unsafe_allow_html=True)
