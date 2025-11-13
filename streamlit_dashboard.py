@@ -1,12 +1,13 @@
 """
 Washington Climate-Fire Risk Intelligence Dashboard
-ENHANCED VERSION with FEMA Disaster Markers
+STREAMLIT CLOUD COMPATIBLE VERSION
 
 Features:
 - Base choropleth by risk score
 - Individual FEMA disaster markers
 - Combined FEMA + NOAA statistics
 - Interactive popups with fire history
+- FIXED: Streamlit Cloud map rendering
 
 Author: Josh Curry
 Course: EM440 -  Geographic Information Systems (GIS) for EM - Professor Borchardt  
@@ -18,7 +19,7 @@ import pandas as pd
 import plotly.express as px
 import folium
 from folium import plugins
-from streamlit_folium import folium_static
+from streamlit_folium import st_folium
 import json
 
 # Page configuration
@@ -147,7 +148,7 @@ with col1:
     )
 
 with col2:
-    fema_count = len(fema_data) if fema_data is not None else 211
+    fema_count = len(fema_data) if fema_data is not None else 126
     st.metric(
         "FEMA Fire Disasters",
         fema_count,
@@ -243,7 +244,7 @@ with map_col:
         # Create marker cluster for FEMA disasters
         marker_cluster = plugins.MarkerCluster(name='FEMA Disasters').add_to(m)
         
-        # Add individual markers (now with CORRECT coordinates)
+        # Add individual markers
         for idx, row in fema_filtered.iterrows():
             popup_html = f"""
             <div style="font-family: Arial; width: 250px;">
@@ -319,8 +320,8 @@ with map_col:
     # Add layer control
     folium.LayerControl().add_to(m)
     
-    # Display map
-    folium_static(m, width=900, height=600)
+    # Display map using st_folium for better Streamlit Cloud compatibility
+    st_folium(m, width=900, height=600, returned_objects=[])
 
 with chart_col:
     st.subheader("Risk Distribution")
@@ -417,7 +418,7 @@ st.markdown("""
     • Wildland-Urban Interface: USDA Forest Service (2020) <br>
     • Demographics: U.S. Census Bureau (2020) <br>
     
-    **Last Updated:** November 8, 2025 | Josh Curry | Pierce College Fort Steilacoom
+    **Last Updated:** November 13, 2025 | Josh Curry | Pierce College Fort Steilacoom
 """, unsafe_allow_html=True)
 
 # Sidebar info
@@ -426,7 +427,7 @@ st.sidebar.markdown("""
     ### About This Dashboard
     
     Multi-layer fire risk analysis combining:
-    - **186 FEMA disasters** (1991-2024)
+    - **126 FEMA disasters** (1991-2024)
     - **482 NOAA wildfire events** (1996-2024)
     - **Climate trends** (2019-2024)
     - **Wildland-Urban Interface (WUI) exposure data** (2020)
